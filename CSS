@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: cursive;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffb6e9, #ffe6f9);
+  color: #5a005a;
+  overflow-x: hidden;
+}
+
+/* Floating cloud animation */
+.clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: url('https://i.ibb.co/VVJ3Gzy/cloud.png') repeat-x;
+  animation: floatClouds 60s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes floatClouds {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Sections */
+header {
+  padding: 50px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff1493;
+  animation: bounce 2s infinite alternate;
+}
+
+h2 {
+  color: #c71585;
+  margin-top: 30px;
+}
+
+p, li {
+  font-size: 18px;
+  animation: fadeInUp 2s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #ffb6e9;
+  border-top: 2px solid #ff69b4;
+}
