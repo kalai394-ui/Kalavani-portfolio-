@@ -1,0 +1,7 @@
+// Simple animation effect
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header h1");
+  setInterval(() => {
+    header.style.color = header.style.color === "deeppink" ? "#ff69b4" : "deeppink";
+  }, 1000);
+});
